@@ -1,0 +1,21 @@
+/* Navbar.css */
+.Navbar {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .Navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+  }
+  
+  .Navbar a:hover {
+    text-decoration: underline;
+  }
+  
