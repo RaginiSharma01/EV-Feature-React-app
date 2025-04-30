@@ -29,7 +29,7 @@ function Home() {
       {/* About Section */}
       <section className="about">
         <h2>About Us</h2>
-        <p>Solor EV is dedicated to providing the most accurate and up-to-date information on electric vehicles, charging stations, and much more. Our mission is to make the transition to electric vehicles as smooth as possible.</p>
+        <p>Solar EV is dedicated to providing the most accurate and up-to-date information on electric vehicles, charging stations, and much more. Our mission is to make the transition to electric vehicles as smooth as possible.</p>
       </section>
 
       {/* Call to Action Section */}
@@ -39,7 +39,7 @@ function Home() {
 
       {/* Footer Section */}
       <footer className="footer">
-        <p>&copy; 2025 Solor EV. All rights reserved.</p>
+        <p>&copy; 2025 Solar EV. All rights reserved.</p>
         <p>Privacy | Terms of Service</p>
       </footer>
     </div>
