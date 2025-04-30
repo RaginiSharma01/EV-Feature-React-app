@@ -21,7 +21,7 @@ Before you begin, ensure you have the following installed:
 - npm (comes with Node.js)
 - Git
 
-### 📥 Step 1: Clone the Repository
+### 📥 Step 1: Fork and Clone the Repository
 
 Use Git to clone the project:
 
