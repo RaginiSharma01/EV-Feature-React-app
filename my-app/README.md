@@ -35,7 +35,7 @@ git clone https://github.com/RaginiSharma01/Solar-EV-Rescue-App.git
 cd Solar-EV-Rescue-App
 ```
 
-#📦 Step 3: Install Dependencies
+# 📦 Step 3: Install Dependencies
 Install all required npm packages:
 ```bash
  npm install
