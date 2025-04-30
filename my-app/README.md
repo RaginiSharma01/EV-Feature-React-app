@@ -47,7 +47,7 @@ To start the application in development mode:
 npm start
 ```
 
-#🌐 Step 5: Open in Browser
+# 🌐 Step 5: Open in Browser:
 Once the server starts, your default browser should automatically open. If not, open your browser and go to:
 
 http://localhost:3000/
