@@ -1,4 +1,4 @@
-# Solar EV Rescue Booking Website
+## Solar EV Rescue Booking Website
 
 This is a web application designed to assist owners of electric vehicles (EVs) with a solar-powered emergency rescue truck booking service. It provides a map feature to locate and book the nearest available rescue truck for stranded EVs.
 
