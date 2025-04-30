@@ -27,20 +27,25 @@ Use Git to clone the project:
 
 ```bash
 git clone https://github.com/RaginiSharma01/Solar-EV-Rescue-App.git
+```
 
 # 📁 Step 2: Navigate to the Project Directory
+
 ```bash
 cd Solar-EV-Rescue-App
+```
 
 #📦 Step 3: Install Dependencies
 Install all required npm packages:
 ```bash
  npm install
+ ```
 
  # ▶️ Step 4: Start the Development Server
 To start the application in development mode:
 ```bash
 npm start
+```
 
 #🌐 Step 5: Open in Browser
 Once the server starts, your default browser should automatically open. If not, open your browser and go to:
