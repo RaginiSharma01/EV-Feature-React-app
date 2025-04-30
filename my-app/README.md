@@ -1,66 +1,49 @@
-# EV Feature React App
+# Solar EV Rescue Booking Website
 
-This is a React-based web application showcasing electric vehicle features. It allows users to explore and compare different electric vehicle models based on various features such as range, performance, and price.
+This is a web application designed to assist owners of electric vehicles (EVs) with a solar-powered emergency rescue truck booking service. It provides a map feature to locate and book the nearest available rescue truck for stranded EVs.
 
+## Features
 
-## Installation
+- **Map Integration**: Users can view their location and the nearby rescue trucks using an interactive map.
+- **Rescue Truck Booking**: Users can book a rescue truck to assist with EVs that have run out of charge or need assistance.
+- **Solar-Powered Solution**: Emphasizes the use of renewable energy for emergency services.
+- **User-Friendly Interface**: The app is designed with a simple, intuitive interface for easy navigation.
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/RaginiSharma01/EV-Feature-React-app.git
+## 🚀 Installation & Local Setup
 
-# Navigate into the project directory
+Follow these steps to set up and run the project on your local environment.
 
-cd EV-Feature-React-app
+### ✅ Prerequisites
 
+Before you begin, ensure you have the following installed:
 
+- [Node.js](https://nodejs.org/) (v14 or higher recommended)
+- npm (comes with Node.js)
+- Git
 
+### 📥 Step 1: Clone the Repository
 
+Use Git to clone the project:
 
+```bash
+git clone https://github.com/RaginiSharma01/Solar-EV-Rescue-App.git
 
+# 📁 Step 2: Navigate to the Project Directory
+```bash
+cd Solar-EV-Rescue-App
 
+#📦 Step 3: Install Dependencies
+Install all required npm packages:
+```bash
+ npm install
 
+ # ▶️ Step 4: Start the Development Server
+To start the application in development mode:
+```bash
+npm start
 
+#🌐 Step 5: Open in Browser
+Once the server starts, your default browser should automatically open. If not, open your browser and go to:
 
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+http://localhost:3000/
 
