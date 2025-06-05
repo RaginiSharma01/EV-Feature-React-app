@@ -1,0 +1,47 @@
+.battery-specs-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: #1abc9c;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.back-button:hover {
+  transform: translateX(-3px);
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.spec-card {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.tech-details {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: #f1f8ff;
+  border-radius: 8px;
+}
+
+.tech-details ul {
+  padding-left: 1.5rem;
+}
+
+.tech-details li {
+  margin-bottom: 0.5rem;
+}

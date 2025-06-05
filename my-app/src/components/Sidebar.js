@@ -12,7 +12,8 @@ function Sidebar({ isOpen }) {
           <li><Link to="/home">Home</Link></li>
           <li><Link to="/map">Map</Link></li>
           <li><Link to="/contact">Contact</Link></li>
-          <li><Link to="/evFeature">EV Features</Link></li>
+          <li><Link to="/ev-features">EV Features</Link></li>
+
         </ul>
       </nav>
     </div>

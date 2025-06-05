@@ -1,41 +1,77 @@
 import React, { useEffect } from 'react';
-import { MapContainer, TileLayer } from 'react-leaflet';
+import { MapContainer, TileLayer, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import 'leaflet-control-geocoder'; // Correct import for leaflet-control-geocoder
 import L from 'leaflet';
-import { useMap } from 'react-leaflet';
+import Geocoder from 'leaflet-control-geocoder';
+import 'leaflet-control-geocoder/dist/Control.Geocoder.css';
+import './Map.css'; // Our custom CSS file
+
+// Fix for default marker icons
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
+  iconUrl: require('leaflet/dist/images/marker-icon.png'),
+  shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
+});
 
 function Map() {
   return (
-    <section id="map" className="section">
-      <h2>Map Feature</h2>
-      <MapContainer center={[51.505, -0.09]} zoom={13} style={{ height: '500px', width: '100%' }}>
+    <section className="map-container">
+      <div className="map-header">
+        <h2>Interactive Map</h2>
+        <div className="map-controls">
+          <button className="map-btn">Legend</button>
+          <button className="map-btn">Layers</button>
+        </div>
+      </div>
+      
+      <MapContainer 
+        center={[51.505, -0.09]} 
+        zoom={13} 
+        className="leaflet-container"
+      >
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         />
-        <MapWithGeocoder />
+        <MapControls />
       </MapContainer>
     </section>
   );
 }
 
-// Component that adds the geocoder and markers to the map
-function MapWithGeocoder() {
-  const map = useMap(); // Now this is within MapContainer
+function MapControls() {
+  const map = useMap();
 
   useEffect(() => {
-    // Adding geocoder (search) control to the map
-    L.Control.geocoder({
-      defaultMarkGeocode: true
-    }).addTo(map); // Directly adding geocoder without assigning it to a variable
+    // Initialize geocoder
+    const geocoder = new Geocoder({
+      defaultMarkGeocode: true,
+      position: 'topleft',
+      placeholder: 'Search location...',
+      geocoder: new Geocoder.Nominatim(),
+      collapsed: false,
+    }).addTo(map);
 
-    // You can add your marker and other map elements here
+    // Add default marker
     const marker = L.marker([51.505, -0.09]).addTo(map);
-    marker.bindPopup('<b>Hello world!</b><br>I am a popup.');
+    marker.bindPopup('<b>Welcome!</b><br>This is your starting point.');
 
+    // Add scale control
+    L.control.scale({ position: 'bottomleft' }).addTo(map);
+
+    return () => {
+      // Cleanup
+      map.removeControl(geocoder);
+      map.eachLayer(layer => {
+        if (layer instanceof L.Marker) {
+          map.removeLayer(layer);
+        }
+      });
+    };
   }, [map]);
 
-  return null; // This component does not render anything on its own
+  return null;
 }
 
 export default Map;
